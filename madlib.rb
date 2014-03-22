@@ -50,39 +50,36 @@ def madlibs_from_file
     puts madlibs_text
     puts "==================="
     puts
-    part_of_speech_needed = madlibs_text.match(/(?<=\(\()(.*?)(?=\)\))/m)
-    while part_of_speech_needed
-      if ("#{part_of_speech_needed}")[0] == "a"  && ((("#{part_of_speech_needed}")[1] == 'n' && ("#{part_of_speech_needed}")[2] == " ") || ("#{part_of_speech_needed}")[1] == " ")
+    reusable_answers = {}
+    part_of_speech_needed = ("#{madlibs_text.match(/(?<=\(\()(.*?)(?=\)\))/m)}")
+    while (part_of_speech_needed != "")
+      if part_of_speech_needed[0] == "a"  && ((part_of_speech_needed[1] == 'n' && part_of_speech_needed[2] == " ") || part_of_speech_needed[1] == " ")
         ### Do nothing special.  This is the default request for a part of speech
         ###  which looks like ((an adjective)) or ((a noun)).
         print "Please enter "
-        print word_wrap("#{part_of_speech_needed}")
+        print word_wrap(part_of_speech_needed)
         print " :  "
         provided_word = gets.chomp
         puts
         madlibs_text = madlibs_text.sub(/\(\(.*?\)\)/m, provided_word)
-      elsif ("#{part_of_speech_needed}").match(":")
+      elsif part_of_speech_needed.match(":")
         ### This is a new key/value pair.  Store in the hash.
         print "Please enter "
-        print word_wrap("#{part_of_speech_needed}")
+        print word_wrap(part_of_speech_needed)
         print " :  "
-        provided_word = gets.chomp
+        value = gets.chomp
         puts
-        # TODO: pull out key from string, provided_word
-        # TODO: pull out value from string, provided_word
-        # TODO: store the key/value pair into hash ... need to initialize hash ahead of time?
-        value = provided_word
+        key = part_of_speech_needed.match(/(.*?)(?=:)/)
+        reusable_answers[("#{key}")] = ("#{value}")
         madlibs_text = madlibs_text.sub(/\(\(.*?\)\)/m, value)
       else
         ### This is an existing key.  Retrieve corresponding value from the hash.
-        # TODO: pull out key
-        # TODO: retrieve value from hash using key
-        value = "E"
+        key = ("#{part_of_speech_needed}")
+        value = reusable_answers[key]
         madlibs_text = madlibs_text.sub(/\(\(.*?\)\)/m, value)
       end
+      part_of_speech_needed = ("#{madlibs_text.match(/(?<=\(\()(.*?)(?=\)\))/m)}")
 
-
-      part_of_speech_needed = madlibs_text.match(/(?<=\(\()(.*?)(?=\)\))/m)
     end
     puts "==================="
     puts "Here is your madlib:"
