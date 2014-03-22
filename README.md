@@ -26,7 +26,6 @@ The simple version is short and just uses strings, puts, and gets.
 
 The complex, interesting version loads up madlibs from a file and dumps the file to the output.
 
-To be implemented:
 
 Madlibs contains examples of
 =======
@@ -48,3 +47,6 @@ Madlibs contains examples of
 ######REGEX
 - using regex to pull out strings the begin/end with given substrings
 - using regex to replace substrings
+
+######HASH
+- use a simple hash table to re-use madlib responses
