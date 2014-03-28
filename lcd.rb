@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+puts
+
+
+puts (" -- ")
+puts ("|  |")
+puts ("|  |")
+puts ("    ")
+puts ("|  |")
+puts ("|  |")
+puts (" -- ")
+
+puts ("    ")
+puts ("   |")
+puts ("   |")
+puts ("    ")
+puts ("   |")
+puts ("   |")
+puts ("    ")
+
+puts (" - ")
+puts ("| |")
+puts ("   ")
+puts ("| |")
+puts (" - ")
+
+puts ("   ")
+puts ("  |")
+puts ("   ")
+puts ("  |")
+puts ("   ")
+
+puts (" - ")
+puts ("  |")
+puts (" - ")
+puts ("|  ")
+puts (" - ")
+
+puts (" - ")
+puts ("  |")
+puts (" - ")
+puts ("  |")
+puts (" - ")
+
+puts ("   ")
+puts ("| |")
+puts (" - ")
+puts ("  |")
+puts ("   ")
+
+puts (" - ")
+puts ("|  ")
+puts (" - ")
+puts ("  |")
+puts (" - ")
+
+puts (" - ")
+puts ("|  ")
+puts (" - ")
+puts ("| |")
+puts (" - ")
+
+puts (" - ")
+puts ("  |")
+puts ("   ")
+puts ("  |")
+puts ("   ")
+
+puts (" - ")
+puts ("| |")
+puts (" - ")
+puts ("| |")
+puts (" - ")
+
+puts (" - ")
+puts ("| |")
+puts (" - ")
+puts ("  |")
+puts (" - ")
+
+puts
