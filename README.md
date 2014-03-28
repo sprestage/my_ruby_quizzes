@@ -1,5 +1,20 @@
-MadLibs README
+Ruby Quizzes README
 =======
+These are my efforts at the the "Best of Ruby Quiz, v1" exercises from the book by James Edward Gray II. This will also serve as a reference for useful example of ruby code.
+
+
+Ruby Quiz #2
+======
+
+LCD numbers
+=====
+
+
+Ruby Quiz #1
+======
+
+MadLibs
+=====
 
 This is a madlibs game that runs at your unix command line, using the following syntax:
 <pre>
