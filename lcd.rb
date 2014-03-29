@@ -99,16 +99,16 @@ if ARGV.count > 0
     if ARGV[0] == "-s"
       size = ARGV[1].to_i
       if size < 1
-        puts "Size must be greater than zero.  Using default size of: #{size}."
         size = 2
+        puts "Size must be greater than zero.  Using default size of: #{size}."
       end  # end size < 1
     else
       puts
       puts "Not sure what you are after.  The correct format for running this program is:"
-      puts "    $ ./LCDnumbers an_integer"
+      puts "    $ ./lcd.rb an_integer"
       puts
       puts "or, if you would like the digit to be printed in a smaller or bigger format:"
-      puts "    $ ./LCDnumbers -s 1 another_integer"
+      puts "    $ ./lcd.rb -s 1 another_integer"
     end  # end if ARGV[0] == "-s"
 
   else
